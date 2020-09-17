@@ -25,11 +25,13 @@ namespace DroneDelivery.Data.Data.EntityConfiguration
             builder.Property(e => e.Status)
                     .IsRequired();
 
-            builder.Ignore(x => x.Pedidos);
+            builder.HasMany(s => s.HistoricoPedidos);
 
-            //builder.HasMany(x => x.Pedidos)
-            //        .WithOne(x => x.Drone)
-            //        .HasForeignKey(x => x.DroneId);
+            var navigation = builder.Metadata.FindNavigation(nameof(Drone.HistoricoPedidos));
+            navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
+
+
+            builder.Ignore(x => x.Pedidos);
 
         }
     }

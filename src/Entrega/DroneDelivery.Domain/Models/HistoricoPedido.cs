@@ -6,9 +6,8 @@ namespace DroneDelivery.Domain.Models
     public class HistoricoPedido
     {
 
-        public Guid Id { get; set; }
+        public Guid Id { get; private set; }
 
-        [ForeignKey("Drone")]
         public Guid DroneId { get; private set; }
         public Drone Drone { get; }
 
@@ -25,6 +24,7 @@ namespace DroneDelivery.Domain.Models
 
         private HistoricoPedido(Guid droneId, Guid pedidoId)
         {
+            Id = Guid.NewGuid();
             DroneId = droneId;
             PedidoId = pedidoId;
             DataSaida = DateTime.Now;

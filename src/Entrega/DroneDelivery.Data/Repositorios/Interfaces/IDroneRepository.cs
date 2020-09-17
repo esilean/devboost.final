@@ -13,5 +13,7 @@ namespace DroneDelivery.Data.Repositorios.Interfaces
 
         Task AdicionarAsync(Drone drone);
 
+        Task AdicionarHistoricoAsync(IEnumerable<HistoricoPedido> historicoPedidos);
+
     }
 }

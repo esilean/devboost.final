@@ -16,10 +16,9 @@ namespace DroneDelivery.Data.Data.EntityConfiguration
             builder.Property(e => e.DataEntrega);
 
             builder.HasOne(e => e.Drone)
-                .WithMany()
+                .WithMany(x => x.HistoricoPedidos)
                 .HasForeignKey(x => x.DroneId);
 
-            //builder.Ignore(x => x.PedidoId);
             builder.Ignore(x => x.Pedido);
 
         }

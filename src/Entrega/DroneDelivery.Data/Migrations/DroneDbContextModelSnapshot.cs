@@ -68,7 +68,7 @@ namespace DroneDelivery.Data.Migrations
 
                     b.HasIndex("DroneId");
 
-                    b.ToTable("HistoricoPedidos","dbo");
+                    b.ToTable("HistoricoPedidos", "dbo");
                 });
 
             modelBuilder.Entity("DroneDelivery.Domain.Models.Usuario", b =>

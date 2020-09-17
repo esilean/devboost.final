@@ -1,7 +1,7 @@
-# DevBoost - Drone Delivery - Microservices
+# DevBoost - Drone Delivery - Microservices - Kafka
 
 Projeto do curso DevBoost - Itaú
-Este é um projeto da formação DevBoost do Itaú para trabalharmos com tecnologias envolvidadas no Itáu.
+Este é um projeto da formação DevBoost do Itaú para trabalharmos com tecnologias envolvidas no Itáu.
 
 ## Techs
 

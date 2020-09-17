@@ -7,7 +7,7 @@
     "TopicPedidoCriado": "pedido-criado-event",
     "TopicPedidoAtualizado": "pedido-atualizado-event",
     "ConsumerGroup": "cg-dronedelivery-pedido-entrega",
-    "UrlBaseEntrega": "https://localhost:5001",
+    "UrlBaseEntrega": "https://localhost:44352",
 
     "App:Login": "admin@test.com",
     "App:Senha": "123"

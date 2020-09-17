@@ -66,5 +66,10 @@ namespace DroneDelivery.Data.Repositorios
 
             return drones.Where(x => x.Pedidos.Count() > 0);
         }
+
+        public async Task AdicionarHistoricoAsync(IEnumerable<HistoricoPedido> historicoPedidos)
+        {
+            await _context.AddRangeAsync(historicoPedidos);
+        }
     }
 }

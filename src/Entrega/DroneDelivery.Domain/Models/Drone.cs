@@ -11,6 +11,7 @@ namespace DroneDelivery.Domain.Models
     public class Drone : Entity, IAggregateRoot
     {
 
+        private readonly List<HistoricoPedido> _historicoPedidos = new List<HistoricoPedido>();
         private readonly List<Pedido> _pedidos = new List<Pedido>();
 
         public double Capacidade { get; private set; }
@@ -23,6 +24,8 @@ namespace DroneDelivery.Domain.Models
 
         [NotMapped]
         public IReadOnlyCollection<Pedido> Pedidos => _pedidos;
+
+        public IReadOnlyCollection<HistoricoPedido> HistoricoPedidos => _historicoPedidos;
 
         public DroneStatus Status { get; private set; }
 
@@ -131,6 +134,11 @@ namespace DroneDelivery.Domain.Models
         public void SepararPedidosParaEntrega()
         {
             _pedidos.RemoveAll(x => x.Status != PedidoStatus.EmEntrega);
+        }
+
+        public void CriarHistorico(HistoricoPedido historicoPedido)
+        {
+            _historicoPedidos.Add(historicoPedido);
         }
 
         public void CarregarPedidos(IEnumerable<Pedido> pedidos)

@@ -2,14 +2,11 @@
 using DroneDelivery.Shared.Domain.Core.Enums;
 using MongoDB.Bson.Serialization.Attributes;
 using System;
-using System.Collections.Generic;
 
 namespace DroneDelivery.Domain.Models
 {
     public class Pedido : Entity, IAggregateRoot
     {
-
-        private readonly List<HistoricoPedido> _historicoPedidos = new List<HistoricoPedido>();
 
         public Guid UsuarioId { get; private set; }
 
@@ -26,7 +23,7 @@ namespace DroneDelivery.Domain.Models
         [BsonIgnore]
         public Drone Drone { get; private set; }
 
-        public IReadOnlyCollection<HistoricoPedido> HistoricoPedidos => _historicoPedidos;
+
 
         protected Pedido() { }
 
@@ -55,10 +52,6 @@ namespace DroneDelivery.Domain.Models
             DroneId = droneId;
         }
 
-        public void CriarHistorico(HistoricoPedido historicoPedido)
-        {
-            _historicoPedidos.Add(historicoPedido);
-        }
 
         public void CarregarUsuario(Usuario usuario)
         {
