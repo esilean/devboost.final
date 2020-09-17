@@ -1,0 +1,18 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "BootstrapServers": "localhost:9092",
+    "TopicPedidoCriado": "pedido-criado-event",
+    "TopicPedidoAtualizado": "pedido-atualizado-event",
+    "ConsumerGroup": "cg-dronedelivery-pedido-entrega",
+    "UrlBaseEntrega": "https://localhost:5001",
+
+    "App:Login": "admin@test.com",
+    "App:Senha": "123"
+  },
+  "Host": {
+    "LocalHttpPort": "7072"
+  }
+}

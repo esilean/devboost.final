@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "DroneDelivery.PedidoPagamento.Trigger": {
+      "commandName": "Project",
+      "commandLineArgs": "host start --pause-on-error"
+    }
+  }
+}

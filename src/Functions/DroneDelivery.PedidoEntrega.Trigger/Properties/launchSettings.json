@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "DroneDelivery.PedidoEntrega.Trigger": {
+      "commandName": "Project",
+      "commandLineArgs": "host start --pause-on-error"
+    }
+  }
+}

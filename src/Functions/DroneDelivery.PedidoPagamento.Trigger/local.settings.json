@@ -1,0 +1,14 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "BootstrapServers": "localhost:9092",
+    "TopicPedidoCriado": "pedido-criado-event",
+    "ConsumerGroup": "cg-dronedelivery-pedido-pagamento",
+    "UrlBasePagamento": "https://localhost:44353"
+  },
+  "Host": {
+    "LocalHttpPort": "7073"
+  }
+}
