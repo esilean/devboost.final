@@ -34,4 +34,4 @@ Este é um projeto da formação DevBoost do Itaú para trabalharmos com tecnolo
 
 ## Testes
 
-- Para rodar os testes é necessário utilizar o Docker na porta 27018
+- Para rodar os testes é necessário rodar o MongoDB na porta 27018
